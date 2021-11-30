@@ -1,0 +1,10 @@
+@mixin flex-mixin($direction, $align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin border($width, $type, $colour, $curvature) {
+    border: $width $type $curvature;
+    border-radius: $curvature;
+}
