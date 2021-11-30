@@ -1,1 +1,8 @@
-@use "./partials/palette.scss";
+body {
+    background-color: aquamarine;
+}
+
+@import "./components/heading.scss";
+@import "./components/calculator.scss";
+@import "./components/calculator-display.scss";
+@import "./components/calculator-buttons.scss";

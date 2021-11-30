@@ -1,0 +1,19 @@
+@use "../partials/layout";
+@use "../partials/palette";
+
+.calculator-body {
+    @include layout.flex-mixin(column, space-between, center);
+    @include layout.border(
+        5px,
+        solid,
+        palette.$calculator-body-border-colour,
+        20px
+    );
+    background-color: palette.$calculator-body-background-colour;
+    width: 40%;
+    margin: auto;
+    height: 90%;
+}
+
+@import "./calculator-display.scss";
+@import "./calculator-buttons.scss";
