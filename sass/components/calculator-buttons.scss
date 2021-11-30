@@ -1,6 +1,109 @@
+@use "../partials/layout";
+@use "../partials/palette";
+
 .calculator-body__buttons-body {
-    border: 1px solid red;
+    width: 95%;
+    margin: auto auto 15px auto;
+    height: 85%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: auto;
+    grid-template-areas:
+        "MC MR MS Mplus Mminus"
+        "arrow CE C plusminus SquareRoot"
+        "seven eight nine divide modulo"
+        "four five six multiply inverse"
+        "one two three subtract equals"
+        "zero zero comma add equals";
+
+    &--MC {
+        grid-area: MC;
+    }
+    &--MR {
+        grid-area: MR;
+    }
+    &--MS {
+        grid-area: MS;
+    }
+    &--Mplus {
+        grid-area: Mplus;
+    }
+    &--Mminus {
+        grid-area: Mminus;
+    }
+    &--arrow {
+        grid-area: arrow;
+    }
+    &--CE {
+        grid-area: CE;
+    }
+    &--C {
+        grid-area: C;
+    }
+    &--plusminus {
+        grid-area: plusminus;
+    }
+    &--SquareRoot {
+        grid-area: SquareRoot;
+    }
+    &--7 {
+        grid-area: seven;
+    }
+    &--8 {
+        grid-area: eight;
+    }
+    &--9 {
+        grid-area: nine;
+    }
+    &--divide {
+        grid-area: divide;
+    }
+    &--modulo {
+        grid-area: modulo;
+    }
+    &--4 {
+        grid-area: four;
+    }
+    &--5 {
+        grid-area: five;
+    }
+    &--6 {
+        grid-area: six;
+    }
+    &--multiply {
+        grid-area: multiply;
+    }
+    &--inverse {
+        grid-area: inverse;
+    }
+    &--1 {
+        grid-area: one;
+    }
+    &--2 {
+        grid-area: two;
+    }
+    &--3 {
+        grid-area: three;
+    }
+    &--subtract {
+        grid-area: subtract;
+    }
+    &--equals {
+        grid-area: equals;
+    }
+    &--0 {
+        grid-area: zero;
+    }
+    &--comma {
+        grid-area: comma;
+    }
+    &--add {
+        grid-area: add;
+    }
+}
+
+.calculator-body__buttons {
+    background-color: palette.$calculator-button-background-colour;
+    color: palette.$calculator-button-text-colour;
+    text-align: center;
 }

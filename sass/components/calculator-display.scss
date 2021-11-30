@@ -1,4 +1,17 @@
+@use "../partials/layout";
+@use "../partials/palette";
+
 .calculator-body__display {
-    margin-bottom: 10px;
+    margin: 15px auto;
+    width: 95%;
+    height: 15%;
     border: 1px solid blue;
+    text-align: right;
+    @include layout.border(
+        2px,
+        solid,
+        palette.$calculator-display-border-colour,
+        10px
+    );
+    background-color: palette.$calculator-display-background-colour;
 }
