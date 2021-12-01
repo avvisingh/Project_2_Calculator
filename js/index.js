@@ -7,6 +7,9 @@ let numberButton = document.getElementsByClassName(
 let displayText = document.getElementById("calculator-body__display-text");
 let equalsButton = document.getElementById("equalsButton");
 let plusButton = document.getElementById("plusButton");
+let minusButton = document.getElementById("minusButton");
+let multiplyButton = document.getElementById("multiplyButton");
+let divideButton = document.getElementById("divideButton");
 
 let numberStringConcat = (n) => {
     runningNumber += n;
@@ -22,24 +25,62 @@ let clearDisplayAndTotal = () => {
 };
 
 let addToTotal = () => {
-    runningTotal += +runningNumber;
+    !lastOperatorClicked
+        ? (runningTotal = +runningNumber)
+        : calculateRunningTotal();
     runningNumber = "";
     lastOperatorClicked = "+";
     displayText.innerHTML = runningTotal;
 };
 
-let subtractFromTotal = () => {};
-
-let divideTotal = () => {};
-
-let multiplyTotal = () => {};
-
-let displayTotal = () => {
-    if (lastOperatorClicked === "+") {
-        runningTotal += +runningNumber;
-    }
+let subtractFromTotal = () => {
+    !lastOperatorClicked
+        ? (runningTotal = +runningNumber)
+        : calculateRunningTotal();
+    runningNumber = "";
+    lastOperatorClicked = "-";
     displayText.innerHTML = runningTotal;
 };
 
+let divideTotal = () => {
+    !lastOperatorClicked
+        ? (runningTotal = +runningNumber)
+        : calculateRunningTotal();
+    runningNumber = "";
+    lastOperatorClicked = "/";
+    displayText.innerHTML = runningTotal;
+};
+
+let multiplyTotal = () => {
+    !lastOperatorClicked
+        ? (runningTotal = +runningNumber)
+        : calculateRunningTotal();
+    runningNumber = "";
+    lastOperatorClicked = "*";
+    displayText.innerHTML = runningTotal;
+};
+
+let calculateRunningTotal = () => {
+    if (lastOperatorClicked === "+") {
+        runningTotal += +runningNumber;
+    } else if (lastOperatorClicked === "-") {
+        runningTotal -= +runningNumber;
+    } else if (lastOperatorClicked === "*") {
+        runningTotal *= +runningNumber;
+    } else if (lastOperatorClicked === "/") {
+        runningTotal /= +runningNumber;
+    }
+    runningNumber = "";
+    displayText.innerHTML = runningTotal;
+};
+
+let equalsButtonClicked = () => {
+    calculateRunningTotal();
+    lastOperatorClicked = "";
+};
+
 plusButton.addEventListener("click", addToTotal);
-equalsButton.addEventListener("click", displayTotal);
+minusButton.addEventListener("click", subtractFromTotal);
+multiplyButton.addEventListener("click", multiplyTotal);
+divideButton.addEventListener("click", divideTotal);
+equalsButton.addEventListener("click", calculateRunningTotal);
