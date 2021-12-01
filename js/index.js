@@ -76,11 +76,11 @@ let calculateRunningTotal = () => {
 
 let equalsButtonClicked = () => {
     calculateRunningTotal();
-    lastOperatorClicked = "";
+    lastOperatorClicked = "=";
 };
 
 plusButton.addEventListener("click", addToTotal);
 minusButton.addEventListener("click", subtractFromTotal);
 multiplyButton.addEventListener("click", multiplyTotal);
 divideButton.addEventListener("click", divideTotal);
-equalsButton.addEventListener("click", calculateRunningTotal);
+equalsButton.addEventListener("click", equalsButtonClicked);
