@@ -2,12 +2,13 @@
 @use "../partials/palette";
 
 .calculator-body__buttons-body {
-    width: 95%;
-    margin: auto auto 15px auto;
+    width: 90%;
+    margin: auto auto 15px 7.5px;
     height: 85%;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: auto;
+    grid-gap: 5px;
     grid-template-areas:
         "MC MR MS Mplus Mminus"
         "arrow CE C plusminus SquareRoot"
@@ -106,4 +107,17 @@
     background-color: palette.$calculator-button-background-colour;
     color: palette.$calculator-button-text-colour;
     text-align: center;
+    @include layout.border(
+        1px,
+        solid,
+        palette.$calculator-button-border-colour,
+        15px
+    );
+
+    &--usable {
+        &:hover {
+            transform: translateY(1px);
+            box-shadow: 1px 1px #888888;
+        }
+    }
 }
