@@ -1,7 +1,11 @@
 @use "../partials/layout";
 @use "../partials/palette";
+@use "../partials/typography";
 
 .calculator-body__buttons-body {
+    font-family: typography.$font-body;
+    font-weight: 400;
+    font-size: x-large;
     width: 90%;
     margin: auto auto 15px 7.5px;
     height: 85%;
@@ -107,6 +111,7 @@
     background-color: palette.$calculator-button-background-colour;
     color: palette.$calculator-button-text-colour;
     text-align: center;
+    padding-top: 10px;
     @include layout.border(
         1px,
         solid,

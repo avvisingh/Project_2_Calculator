@@ -1,7 +1,12 @@
 @use "../partials/layout";
 @use "../partials/palette";
+@use "../partials/typography";
 
 .calculator-body__display {
+    font-family: typography.$font-body;
+    font-weight: 400;
+    font-size: xx-large;
+    padding-top: 20px;
     margin: 15px auto;
     width: 95%;
     height: 15%;
