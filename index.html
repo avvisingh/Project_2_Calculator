@@ -38,8 +38,8 @@
                     <div class="calculator-body__buttons calculator-body__buttons-body--CE 7">
                         <p>CE</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--C 8">
-                        <p onclick="clearDisplayAndTotal()">C</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--C 8" id="clearButton">
+                        <p>C</p>
                     </div>
                     <div class="calculator-body__buttons calculator-body__buttons-body--plusminus 9">
                         <p>+/-</p>
@@ -47,14 +47,14 @@
                     <div class="calculator-body__buttons calculator-body__buttons-body--SquareRoot 10">
                         <p>&#8730</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable calculator-body__buttons-body--7 11">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(7)">7</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable calculator-body__buttons-body--7 11" id="sevenButton">
+                        <p class="calculator-body__buttons-number">7</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--8 12">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(8)">8</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--8 12" id="eightButton">
+                        <p class="calculator-body__buttons-number">8</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--9 13">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(9)">9</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--9 13" id="nineButton">
+                        <p class="calculator-body__buttons-number">9</p>
                     </div>
                     <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--divide 14" id="divideButton">
                         <p>/</p>
@@ -62,14 +62,14 @@
                     <div class="calculator-body__buttons calculator-body__buttons-body--modulo 15">
                         <p>%</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--4 16">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(4)">4</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--4 16" id="fourButton">
+                        <p class="calculator-body__buttons-number">4</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--5 17">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(5)">5</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--5 17" id="fiveButton">
+                        <p class="calculator-body__buttons-number">5</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--6 18">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(6)">6</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--6 18" id="sixButton">
+                        <p class="calculator-body__buttons-number">6</p>
                     </div>
                     <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--multiply 19" id="multiplyButton">
                         <p>x</p>
@@ -77,14 +77,14 @@
                     <div class="calculator-body__buttons calculator-body__buttons-body--inverse 20">
                         <p>1/x</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--1 21">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(1)">1</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--1 21" id="oneButton">
+                        <p class="calculator-body__buttons-number">1</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--2 22">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(2)">2</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--2 22" id="twoButton">
+                        <p class="calculator-body__buttons-number">2</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--3 23">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(3)">3</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--3 23" id="threeButton">
+                        <p class="calculator-body__buttons-number">3</p>
                     </div>
                     <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--subtract 24" id="minusButton">
                         <p>-</p>
@@ -92,11 +92,11 @@
                     <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--equals 25" id="equalsButton">
                         <p>=</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--0 26">
-                        <p class="calculator-body__buttons-number" onclick="numberStringConcat(0)">0</p>
+                    <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--0 26" id="zeroButton">
+                        <p class="calculator-body__buttons-number">0</p>
                     </div>
-                    <div class="calculator-body__buttons calculator-body__buttons-body--comma 27">
-                        <p>,</p>
+                    <div class="calculator-body__buttons calculator-body__buttons-body--comma 27" id="periodButton">
+                        <p>.</p>
                     </div>
                     <div class="calculator-body__buttons calculator-body__buttons--usable  calculator-body__buttons-body--add 28" id="plusButton">
                         <p>+</p>
